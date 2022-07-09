@@ -31,17 +31,17 @@ int main()
     add_movie(my_movies,"Star Wars", "PG",5);
     add_movie(my_movies,"Cinderella", "PG",7);
 
-    my_movies.display();
+    //my_movies.display();
+    my_movies.displayTableOfRecords();
+    // add_movie(my_movies,"Cinderella", "PG",7);
+    // add_movie(my_movies,"Ice Age", "PG",12);
 
-    add_movie(my_movies,"Cinderella", "PG",7);
-    add_movie(my_movies,"Ice Age", "PG",12);
+    // increment_watched(my_movies,"Big");
+    // increment_watched(my_movies,"Ice Age");
 
-    increment_watched(my_movies,"Big");
-    increment_watched(my_movies,"Ice Age");
+    // my_movies.display();
 
-    my_movies.display();
-
-    increment_watched(my_movies,"XXX");
+    // increment_watched(my_movies,"XXX");
 
     return 0;
 }

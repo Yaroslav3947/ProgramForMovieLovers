@@ -26,4 +26,6 @@ public:
 
     void display() const;
 
+    // Movie& operator = (const Movie &source);
+
 };

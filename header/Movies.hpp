@@ -12,7 +12,7 @@ public:
 
     bool add_movie(std::string name, std::string rating, int watched);
     bool increment_watched(std::string name);
-    void display() const;
+    void display();
     void displayTableOfRecords();
 };
 

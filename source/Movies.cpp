@@ -7,7 +7,6 @@ Movies::Movies() {
 }
 Movies::~Movies() {
 }
-
 bool Movies::add_movie(std::string name, std::string rating, int watched) {
     for(const Movie &mov: movies) {
         if( mov.get_name() == name) {
@@ -26,17 +25,21 @@ bool Movies::increment_watched(std::string name) {
     }
     return false;
 }
-void Movies::display() const {
-    ////TODO: write func 
+void Movies::display() {
     if(movies.size()==0) {
         std::cout << "There no movies, try to add one " << std::endl;
     } else {
         for(Movie mov : movies) {
-            std::cout << std::endl << "----------------------------------------------------" << std::endl;
             mov.display();
-            std::cout << std::endl << "----------------------------------------------------" << std::endl;
         }
     }
-    
-    
+}
+bool cmp(const Movie & movie1, const Movie & movie2) {
+    return movie1.get_watched() > movie2.get_watched();
+};
+void Movies::displayTableOfRecords() {
+    sort(movies.begin(),movies.end(),cmp);
+        for( const Movie &mov : movies) {
+            mov.display();
+        }
 }
